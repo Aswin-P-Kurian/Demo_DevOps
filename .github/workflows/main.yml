@@ -1,0 +1,19 @@
+name: "My Workflow"
+
+on: 
+  push: 
+    branches: [main]
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello From Github actions"
+
+      - name: Show Environments
+        run: |
+        echo "Runner OS: $Runner_OS"
+        echo "Branch: $GITHUB_REF_NAME"background: 
+          docker --version
+          python --version
